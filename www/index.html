@@ -33,7 +33,7 @@
     function startWatch() {
 
         // Update acceleration every 3 seconds
-        var options = { frequency: 1000 };
+        var options = { frequency: 500 };
 
         watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
     }
@@ -56,14 +56,13 @@
                             'Acceleration Z: ' + acceleration.z         + '<br />' +
                             'Timestamp: '      + acceleration.timestamp + '<br />';
         if(acceleration.x >= 5){
-          alert('LEFTup!');
-          
+          $('#show').html('LEFT')
         }
         if(acceleration.x <= -5){
-          alert('rightup!');
+          $('#show').html('Right')
         }
         if(acceleration.z <= -5){
-          alert('Hookup!');
+          $('#show').html('Hookup')
         }
         
     }
@@ -76,7 +75,7 @@
     }
 
     $(document).ready(function() {
-      alert('hi!');
+      alert('hi! turn on Accelerometer');
     });
 
     </script>
