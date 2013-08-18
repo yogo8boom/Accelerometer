@@ -56,15 +56,21 @@
                             'Acceleration Z: ' + acceleration.z         + '<br />' +
                             'Timestamp: '      + acceleration.timestamp + '<br />';
         if(acceleration.x >= 5){
-          $('#show').html('LEFT')
+          $('#show').html('LEFT');
+          setNew();
         }
         if(acceleration.x <= -5){
-          $('#show').html('Right')
+          $('#show').html('Right');
+          setNew();
         }
         if(acceleration.z <= -5){
-          $('#show').html('Hookup')
+          $('#show').html('Hookup');
+          setNew()
         }
-        
+    }
+    function setNew(){
+      var time = acceleration.timestamp;
+      alert('time'+ time);
     }
     
 
