@@ -46,6 +46,19 @@
                             'Acceleration Y: ' + acceleration.y         + '<br />' +
                             'Acceleration Z: ' + acceleration.z         + '<br />' +
                             'Timestamp: '      + acceleration.timestamp + '<br />';
+        if(acceleration.x >= 5){
+          alert('LEFTup!');
+        }
+        if(acceleration.x <= -5){
+          alert('rightup!');
+        }
+        if(acceleration.y <= -5){
+          alert('TOPup!');
+        }
+        if(acceleration.z <= -5){
+          alert('Hookup!');
+        }
+        
     }
 
     // onError: Failed to get the acceleration
@@ -58,6 +71,7 @@
   </head>
   <body>
     <div id="accelerometer">Waiting for accelerometer...</div>
+    <div id="show"></div>
   </body>
 </html>
 
